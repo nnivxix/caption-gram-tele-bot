@@ -6,7 +6,7 @@
   * @param {string} firstName - User's first name
   * @returns {string} Response message for /start command
 */
-export const startCommand = (chatId, firstName) => {
+const startCommand = (chatId, firstName) => {
   return`
 👋 Hello ${firstName}!
 
@@ -24,7 +24,7 @@ Use /help for more information.
   `
 };
 
-export const helpCommand = `
+const helpCommand = `
 📖 *Caption-Gram Bot - Guide*
 
 *Steps:*
@@ -46,3 +46,5 @@ export const helpCommand = `
 *Link Web App:*
 https://caption-gram.vercel.app
   `;
+  
+module.exports = { startCommand, helpCommand };
