@@ -6,11 +6,11 @@ const { startCommand, helpCommand } = require('./commands.js');
 const token = process.env.TELEGRAM_BOT_TOKEN;
 
 if (!token) {
-  console.error('Error: TELEGRAM_BOT_TOKEN tidak ditemukan di file .env');
+  console.error('Error: TELEGRAM_BOT_TOKEN is not set in environment variables.');
   process.exit(1);
 }
 
-// Buat instance bot menggunakan polling untuk menerima pesan baru
+// Create bot instance using polling to receive new messages
 const bot = new TelegramBot(token, {polling: true});
 
 // Handle /start command
@@ -32,5 +32,4 @@ bot.onText(/\/help/, (msg) => {
   bot.sendMessage(chatId, helpMessage, { parse_mode: 'Markdown' });
 });
 
-console.log('Bot sedang berjalan...');
-console.log('Tekan Ctrl+C untuk menghentikan bot.');
+console.log('Bot is running...');

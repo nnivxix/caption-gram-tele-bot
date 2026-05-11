@@ -8,40 +8,40 @@
 */
 export const startCommand = (chatId, firstName) => {
   return`
-👋 Halo ${firstName}!
+👋 Hello ${firstName}!
 
-Selamat datang di Caption-Gram Bot!
+Welcome to Caption-Gram Bot!
 
 📋 Your Chat ID: \`${chatId}\`
 
-📝 Cara menggunakan:
-1. Copy Chat ID di atas (tap untuk copy)
-2. Buka https://caption-gram.vercel.app
-3. Paste Chat ID di kolom Telegram
-4. Submit URL → Caption otomatis dikirim ke sini!
+📝 How to use:
+1. Copy the Chat ID above (tap to copy)
+2. Open https://caption-gram.vercel.app/settings/telegram-bot
+3. Paste the Chat ID into the Telegram field
+4. Submit a URL → Captions will be sent here automatically!
 
-Gunakan /help untuk bantuan lebih lanjut.
+Use /help for more information.
   `
 };
 
 export const helpCommand = `
-📖 *Caption-Gram Bot - Panduan*
+📖 *Caption-Gram Bot - Guide*
 
-*Langkah-langkah:*
-1. Copy Chat ID Anda dari pesan /start
-2. Buka web app Caption-Gram
-3. Paste Chat ID di kolom Telegram
-4. Submit URL Instagram/YouTube/Facebook
-5. Caption akan otomatis dikirim ke chat ini
+*Steps:*
+1. Copy your Chat ID from the /start message
+2. Open the Caption-Gram web app
+3. Paste the Chat ID into the Telegram field
+4. Submit an Instagram/YouTube/Facebook URL
+5. Captions will be automatically sent to this chat
 
-*Perintah yang tersedia:*
-/start - Mulai bot dan dapatkan Chat ID
-/help - Tampilkan panduan ini
+*Available commands:*
+/start - Start the bot and get your Chat ID
+/help - Show this guide
 
 *Troubleshooting:*
-• Pastikan Chat ID sudah benar
-• Cek koneksi internet
-• URL harus dari Instagram, YouTube, atau Facebook
+• Make sure the Chat ID is correct
+• Check your internet connection
+• The URL must be from Instagram, YouTube, or Facebook
 
 *Link Web App:*
 https://caption-gram.vercel.app
