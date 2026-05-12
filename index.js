@@ -1,6 +1,7 @@
 require("dotenv").config();
 const TelegramBot = require("node-telegram-bot-api");
 const { startCommand, helpCommand } = require("./commands.js");
+const { escapeMarkdown } = require("./helpers.js");
 
 // Get token from environment variable
 const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -66,7 +67,7 @@ bot.on("message", async (msg) => {
       const data = await response.json();
       const caption = data.data.caption || "No caption available";
 
-      bot.sendMessage(chatId, caption, { parse_mode: "Markdown" });
+      bot.sendMessage(chatId, escapeMarkdown(caption), { parse_mode: "Markdown" });
     } catch (error) {
       bot.sendMessage(chatId, "Sorry, there was an error processing your link.");
     } finally {
