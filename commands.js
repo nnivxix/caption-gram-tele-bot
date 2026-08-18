@@ -1,4 +1,6 @@
+require("dotenv").config();
 
+const APP_URL = process.env.APP_URL;
 /*
   * commands.js
   * Define command handlers for Telegram bot
@@ -7,7 +9,7 @@
   * @returns {string} Response message for /start command
 */
 const startCommand = (chatId, firstName) => {
-  return`
+  return `
 👋 Hello ${firstName}!
 
 Welcome to Caption-Gram Bot!
@@ -16,7 +18,7 @@ Welcome to Caption-Gram Bot!
 
 📝 How to use:
 1. Copy the Chat ID above (tap to copy)
-2. Open https://caption-gram.vercel.app/settings/telegram-bot
+2. Open ${APP_URL}
 3. Paste the Chat ID into the Telegram field
 4. Submit a URL → Captions will be sent here automatically!
 
@@ -43,8 +45,7 @@ const helpCommand = `
 • Check your internet connection
 • The URL must be from Instagram, YouTube, or Facebook
 
-*Link Web App:*
-https://caption-gram.vercel.app
+*Link Web App:* ${APP_URL}
   `;
-  
+
 module.exports = { startCommand, helpCommand };

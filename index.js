@@ -40,6 +40,10 @@ bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
   const text = msg.text || "";
 
+  if (text.startsWith("/")) {
+    return; // Ignore commands
+  }
+
   // Check if the message contains a link to Instagram, YouTube, or Facebook
   const instagramRegex = /https?:\/\/(www\.)?instagram\.com\/[^\s]+/i;
   const youtubeRegex = /https?:\/\/(www\.)?(youtube\.com|youtu\.be)\/[^\s]+/i;
