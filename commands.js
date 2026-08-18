@@ -18,7 +18,7 @@ Welcome to Caption-Gram Bot!
 
 📝 How to use:
 1. Copy the Chat ID above (tap to copy)
-2. Open ${APP_URL}
+2. Open ${APP_URL}/settings/telegram-bot
 3. Paste the Chat ID into the Telegram field
 4. Submit a URL → Captions will be sent here automatically!
 
